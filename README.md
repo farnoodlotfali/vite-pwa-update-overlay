@@ -8,7 +8,7 @@ The app intentionally includes many rendered components and icons so the product
 
 <img src="./sample.png" alt="Vite PWA Update Overlay screenshot" width="720" />
 
-<video src="./Vite%20Pwa%20Update%20Overlay.mp4" controls width="720"></video>
+<img src="./Vite%20Pwa%20Update%20Overlay.gif" alt="Vite PWA Update Overlay demo" width="720" />
 
 ## Features
 
