@@ -3,7 +3,6 @@ import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import babel from "@rolldown/plugin-babel";
 import { VitePWA } from "vite-plugin-pwa";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -55,83 +54,6 @@ export default defineConfig({
         clientsClaim: true,
         cleanupOutdatedCaches: true,
         sourcemap: true,
-
-        // runtimeCaching: [
-        //   // =========================
-        //   // 1) Fonts
-        //   // =========================
-        //   {
-        //     urlPattern: ({ request }) => request.destination === "font",
-
-        //     handler: "CacheFirst",
-
-        //     options: {
-        //       cacheName: "local-fonts",
-
-        //       expiration: {
-        //         maxEntries: 30,
-        //         maxAgeSeconds: 60 * 60 * 24 * 365,
-        //       },
-
-        //       cacheableResponse: {
-        //         statuses: [0, 200],
-        //       },
-        //     },
-        //   },
-
-        //   // =========================
-        //   // 2) Remote/API Images
-        //   // =========================
-        //   {
-        //     urlPattern: ({ request, url }) => {
-        //       return (
-        //         request.destination === "image" ||
-        //         // image extensions
-        //         /\.(png|jpg|jpeg|webp|svg|gif|avif)$/i.test(url.pathname)
-        //       );
-        //     },
-
-        //     handler: "CacheFirst",
-
-        //     options: {
-        //       cacheName: "remote-images",
-
-        //       expiration: {
-        //         maxEntries: 300,
-        //         maxAgeSeconds: 60 * 60 * 24 * 30,
-        //       },
-
-        //       cacheableResponse: {
-        //         statuses: [0, 200],
-        //       },
-        //     },
-        //   },
-
-        //   // =========================
-        //   // 3) API Calls
-        //   // =========================
-        //   // {
-        //   //   urlPattern: ({ url, request }) =>
-        //   //     request.method === "GET" && url.pathname.startsWith("/api/"),
-
-        //   //   handler: "NetworkFirst",
-
-        //   //   options: {
-        //   //     cacheName: "api-cache",
-
-        //   //     networkTimeoutSeconds: 3,
-
-        //   //     expiration: {
-        //   //       maxEntries: 300,
-        //   //       maxAgeSeconds: 60 * 60,
-        //   //     },
-
-        //   //     cacheableResponse: {
-        //   //       statuses: [0, 200],
-        //   //     },
-        //   //   },
-        //   // },
-        // ],
       },
     }),
   ],
